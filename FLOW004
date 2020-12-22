@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	while(t--)
+	{
+	    int n,rem=0,i=0,temp,count=0;
+	    cin>>n;
+	    temp=n;
+	    while(temp!=0)
+	    {
+	        temp=temp/10;
+	        ++count;
+	    }
+	    int sum[count];
+	    while(n>0)
+	    {
+	        rem=n%10;
+	        sum[i]=rem;
+	        i++;
+	        n=n/10;
+	    }
+	    cout<<sum[0]+sum[count-1]<<endl;
+	}
+	
+	return 0;
+}
